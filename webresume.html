@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #00e5ff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .intro {
+            margin: 50px auto;
+        }
+
+        .intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 50px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #00e5ff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #00e5ff;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card ul li {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Resume</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="intro">
+        <h2>Hamdan Bin Hashim</h2>
+        <p>
+            I am a self-motivated and enthusiastic person who likes to learn more. I am looking forward to upskilling myself and becoming an efficient engineer in the future and contributing to the betterment of society.
+        </p>
+    </section>
+
+    <section id="skills" class="cards">
+        <div class="card">
+            <h3>Languages</h3>
+            <ul>
+                <li>English</li>
+                <li>Tamil</li>
+                <li>Hindi</li>
+                <li>Malayalam</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Computer Skills</h3>
+            <ul>
+                <li>Spreadsheet</li>
+                <li>Python</li>
+                <li>Slide Presentation</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Skills</h3>
+            <ul>
+                <li>Critical Thinking</li>
+                <li>Communication Skills</li>
+                <li>Problem Solving</li>
+                <li>Calm Under Pressure</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="cards">
+        <div class="card">
+            <h3>Education</h3>
+            <p>
+                Kalam Technological University, College Of Engineering, Chengannur<br>
+                Bachelor Of Technology (career in progress)
+            </p>
+        </div>
+        <div class="card">
+            <h3>Volunteer Experience</h3>
+            <p>Bharat Scout and Guide - Volunteered during school time</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Phone: <a href="tel:+917510993142" style="color: #00e5ff;">+91 75109 93142</a></p>
+        <p>Email: <a href="mailto:hamdanbinhashim@gmail.com" style="color: #00e5ff;">hamdanbinhashim@gmail.com</a></p>
+        <p>Address: Nedumangad, Thiruvananthapuram, Kerala</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Futuristic Resume</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Interactive hover effects for cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.1)';
+                card.style.boxShadow = '0 10px 20px rgba(0, 229, 255, 0.5)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+                card.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
